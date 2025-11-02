@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David O. | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fb;
+            color: #333;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background: #121212;
+            color: #f0f0f0;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #4a90e2, #50e3c2);
+            color: white;
+            text-align: center;
+            padding: 80px 20px 40px 20px;
+            position: relative;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 15px 20px;
+            color: #4a90e2;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #50e3c2;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: #4a90e2;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #50e3c2;
+            display: inline-block;
+            padding-bottom: 5px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        body.dark-mode section h2 {
+            color: #50e3c2;
+            border-color: #4a90e2;
+        }
+
+        /* About */
+        #about p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        body.dark-mode .project {
+            background: #1e1e1e;
+            color: #f0f0f0;
+        }
+
+        .project h3 {
+            margin-top: 0;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .project h3 {
+            color: #50e3c2;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .skill:hover {
+            background: #50e3c2;
+        }
+
+        body.dark-mode .skill {
+            background: #50e3c2;
+            color: #121212;
+        }
+
+        /* Contact */
+        #contact a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        #contact a:hover {
+            color: #50e3c2;
+        }
+
+        body.dark-mode #contact a {
+            color: #50e3c2;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fb;
+            color: #888;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        body.dark-mode footer {
+            background: #1e1e1e;
+            color: #bbb;
+        }
+
+        /* Dark mode button */
+        #darkModeToggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background 0.3s;
+            z-index: 100;
+        }
+
+        #darkModeToggle:hover {
+            background: #50e3c2;
+        }
+
+        /* Responsive */
+        @media(max-width: 600px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            header img {
+                width: 120px;
+                height: 120px;
+            }
+            nav a {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>David OOgunbanjo</h1>
+    <p>Computer Science Major | Aspiring Software Engineer in Training</p>
+    <img src="Profile_pic1.jpg" alt="Profile Image">
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm David, a Computer Science major passionate about building software that people love to use. I enjoy coding, problem-solving, and learning new technologies. My goal is to create impactful software solutions while constantly improving my skills.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Short description of your project. Add technologies used and link to GitHub if available.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Short description of your project. Add technologies used and link to GitHub if available.</p>
+        </div>
+        <div class="project">
+            <h3>Project 3</h3>
+            <p>Short description of your project. Add technologies used and link to GitHub if available.</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">Java</div>
+        <div class="skill">HTML & CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">SQL</div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:davidogunbanjo15@gmail.com">davidogunbanjo15@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/david-ogunbanjo-987bb720b/" target="_blank">linkedin.com/in/DavidOgunbanjo</a></p>
+    <p>GitHub: <a href="https://github.com/DeReals" target="_blank">github.com/DeReals</a></p>
+</section>
+
+<footer>
+    &copy; 2025 David O. All rights reserved.
+</footer>
+
+<button id="darkModeToggle">Dark Mode</button>
+
+<script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if(document.body.classList.contains('dark-mode')){
+            toggle.textContent = 'Light Mode';
+        } else {
+            toggle.textContent = 'Dark Mode';
+        }
+    });
+</script>
+
+</body>
+</html>
