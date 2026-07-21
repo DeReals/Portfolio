@@ -138,7 +138,7 @@ export const projects = [
     live: "",
   },
   {
-    title: "CompTIA Security+ Study Platform",
+    title: "CompTIA Security+ & Network+ Study Platform",
     tag: "Frontend",
     accent: "signal",
     description:
@@ -147,7 +147,7 @@ export const projects = [
       "Designed and built the flashcard, quiz, and exam-simulation components, including the flip animations and scoring logic.",
     stack: ["React", "JavaScript", "CSS"],
     metric: "5 exam domains covered",
-    github: "https://github.com/davidogunbanjo/security-plus-study",
+    github: "https://github.com/DeReals/network-study-app",
     live: "",
   },
 ];
