@@ -9,7 +9,9 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="bg-ink min-h-screen">
+    
+    <div className="bg-ink min-h-screen"> 
+      {/*Condences all component for easier access */}
       <Navbar />
       <main>
         <Hero />
