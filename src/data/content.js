@@ -129,12 +129,12 @@ export const projects = [
     tag: "Full-Stack",
     accent: "beacon",
     description:
-      "A full-stack personal finance platform for tracking transactions, visualizing debt payoff timelines, and setting savings goals. A secure REST API handles auth and data, paired with a fast, dashboard-driven React frontend.",
+      " A full-stack personal finance platform for tracking accounts and transactions, visualizing spending and cash-flow trends, and setting savings goals. A secure, authenticated data layer handles login and storage, paired with a fast, dashboard-driven React frontend.",
     contribution:
-      "Built the entire stack solo: schema design, JWT-authenticated API, and the client dashboard, transactions tracker, and debt payoff visualizations.",
-    stack: ["React", "Vite", "Node.js", "Express", "MySQL", "JWT"],
+      "Built the entire stack solo: database schema design, authentication with row-level security, and the client dashboard, transactions tracker, budgeting tools, and spending visualizations.",
+    stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "PostgreSQL (Supabase)", "Supabase Auth (JWT)", "Recharts"],
     metric: "Auth · API · MySQL",
-    github: "https://github.com/davidogunbanjo/ledger",
+    github: "https://github.com/DeReals/ledger",
     live: "",
   },
   {
