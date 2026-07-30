@@ -11,7 +11,7 @@ export const personal = {
   email: "davidogunbanjo15@gmail.com",
   github: "https://github.com/DeReals",
   linkedin: "https://www.linkedin.com/in/david-ogunbanjo-987bb720b/",
-  resumeFile: "/David_Ogunbanjo_Resume.pdf",
+  resumeFile: "/DavidResume.pdf",
   bio: "I'm a Computer Science student at Loyola University Maryland graduating in May 2027, with hands-on experience spanning machine learning research, full-stack development, and enterprise IT systems. As a Hauber Research Fellow, I built a CNN-based pothole detection system reaching 92% accuracy. I currently support 3,000+ users as an IT Technical Services Assistant, and I co-lead Loyola's ACM & Cybersecurity Club. I'm actively working through CompTIA Network+ and Security+, and I like building systems that are efficient, secure, and genuinely useful.",
 };
 
